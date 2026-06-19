@@ -1,0 +1,358 @@
+body {
+    background-color: #ffb6c1;
+    background-image: url("background.png");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transform: scale(0.95);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    z-index: 10;
+}
+
+.kitty-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff1493;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.scrapbook-bg {
+    background-color: #ffd1dc;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,182,193,0.4) 20px, rgba(255,182,193,0.4) 40px),
+        url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.torn-paper-container {
+    background-color: #fdfaf6;
+    width: 85vw;
+    max-width: 700px;
+    height: 80vh;
+    padding: 60px 50px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.15));
+    border: 1px solid rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+.flower {
+    position: absolute;
+    width: 150px;
+    z-index: 20;
+    pointer-events: none;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+}
+
+.top-left-flower {
+    top: -40px;
+    left: -40px;
+    transform: rotate(-10deg);
+}
+
+.bottom-right-flower {
+    bottom: -40px;
+    right: -40px;
+    transform: rotate(15deg);
+}
+
+.scrapbook-text {
+    height: 100%;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.scrapbook-text p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #5c4a4a;
+    margin-bottom: 25px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Custom Scrollbar */
+.scrapbook-text::-webkit-scrollbar {
+    width: 8px;
+}
+.scrapbook-text::-webkit-scrollbar-track {
+    background: transparent;
+}
+.scrapbook-text::-webkit-scrollbar-thumb {
+    background: rgba(255, 182, 193, 0.8);
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .torn-paper-container { padding: 30px 20px; }
+    .flower { width: 100px; }
+    h1 { font-size: 1.8rem; }
+}
+
+.next-btn {
+    background-color: #ff69b4;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+    display: inline-block;
+}
+.next-btn:hover {
+    background-color: #ff1493;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100px;
+}
+
+button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#yes-btn {
+    background-color: #ff69b4;
+    color: white;
+}
+
+#yes-btn:hover {
+    background-color: #ff1493;
+}
+
+#no-btn {
+    background-color: #f0f0f0;
+    color: #555;
+    position: relative;
+    z-index: 5;
+}
+
+#no-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.happy-img {
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+}
+
+/* 3D ANIMATED ENVELOPE STYLES */
+.envelope-scene {
+    position: relative;
+    width: 90vw;
+    max-width: 500px;
+    margin: auto;
+    perspective: 1000px;
+    z-index: 5;
+}
+.env-back {
+    position: absolute;
+    width: 100%; height: 100%;
+    background-color: #fbe5e3;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 1;
+    transition: opacity 0.5s;
+}
+.letter-wrapper {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 85vw; max-width: 700px;
+    height: 80vh;
+    transform: translate(-50%, -50%) scale(0.3); /* Centered and small inside envelope */
+    z-index: 2; /* Behind pocket */
+    transition: transform 1.2s ease-in-out, z-index 0.1s;
+}
+.env-pocket-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    clip-path: polygon(0 35%, 50% 55%, 100% 35%, 100% 100%, 0 100%);
+    z-index: 3;
+    position: relative;
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15));
+    transition: opacity 0.5s;
+}
+.env-flap-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 50% 55%, 0 35%);
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out, z-index 0.6s, opacity 0.5s;
+    z-index: 4;
+    cursor: pointer;
+}
+.click-indicator {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    color: #ff69b4;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+    z-index: 6;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+/* 3D RIBBON SCREEN */
+.ribbon-scene {
+    position: relative;
+    width: 90vw;
+    max-width: 600px;
+    margin: auto;
+    perspective: 1500px;
+    z-index: 50;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.ribbon-scene:hover {
+    transform: scale(1.05);
+}
+.ribbon-half {
+    position: absolute;
+    top: 0; 
+    width: 100%;
+    height: auto;
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s;
+    transform-style: preserve-3d;
+}
+.ribbon-left {
+    left: 0;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    transform-origin: left center;
+}
+.ribbon-right {
+    left: 0;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    transform-origin: right center;
+}
+.ribbon-scene img {
+    width: 100%;
+    display: block;
+    mix-blend-mode: multiply; /* Removes the white background */
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.2));
+}
+/* When opening */
+.ribbon-open .ribbon-left {
+    transform: rotateY(-90deg) scale(1.1);
+    opacity: 0;
+}
+.ribbon-open .ribbon-right {
+    transform: rotateY(90deg) scale(1.1);
+    opacity: 0;
+}
+
+.click-text {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    color: #ff69b4;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+    width: 100%;
+}
+
+/* FALLING ROSES */
+.rose-petal {
+    position: fixed;
+    top: -100px;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear forwards;
+    z-index: 100;
+    mix-blend-mode: multiply;
+}
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg) rotateX(0deg) rotateY(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg) rotateX(360deg) rotateY(360deg);
+        opacity: 0;
+    }
+}

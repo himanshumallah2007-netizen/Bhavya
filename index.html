@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Bhavya ❤️</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff69b4'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SCREEN 0: Intro -->
+    <div id="screen-0" class="screen">
+        <div class="container">
+            <img src="flower.png" alt="Flower" class="kitty-img" style="border-radius: 50%;">
+            <h1>hiiiiiiiiiiiiiiiiiiiiiii cutu hehe <br>i have something special for you ahead hehe 🎀</h1>
+            <button class="next-btn" onclick="nextScreen('screen-0', 'screen-1')">Next</button>
+        </div>
+    </div>
+
+    <!-- SCREEN 1: The Envelope & Letter -->
+    <div id="screen-1" class="screen hidden scrapbook-bg">
+        
+        <div class="envelope-scene" id="envelope-scene">
+            <div class="env-back"></div>
+            
+            <div class="letter-wrapper" id="letter-wrapper">
+                <div class="torn-paper-container">
+                    <img src="https://media.tenor.com/aCDB5zYhJHgAAAAi/flower-pink.gif" class="flower top-left-flower" alt="Flower">
+                    <img src="https://media.tenor.com/aCDB5zYhJHgAAAAi/flower-pink.gif" class="flower bottom-right-flower" alt="Flower">
+                    
+                    <div class="letter-content scrapbook-text" id="letter-content">
+                        <p>hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii so ummmm i really wanted to say i love you the moment we started talking but i tried to conrol myself cause i wanted it to be special not a normal i love you but something special hehe so i decided to say i love you in this way</p>
+                        
+                        <p>you're the resaon that i started loving myself i started improving myself just for you i am and i will do everything and anything to keep that cutu face always happy and i'll always with you anytime you'll need me i'll be there for you okie</p>
+                        
+                        <p>i love that way you smile i love the way you look at me i love the way you share everything i love it when you send me randomly photo video i love the way you ask me if this is nice should i post it before posting it awwwwww i love you're so kind towards me hehe i love your hairs i love your cheeks hehe i wanna eat it i love your voice it's so good i love the way you are i love the way you look i love you're cute face i love you're sexy body i love everything you do i just love you a lot hehe mwahhhhhhhhhhhhhhhhh</p>
+                        
+                        <p>i love you i love you so so so much awwww you're so cutee mwahhhhh nazar na lage kabhi bhi aapko and just know one thing i love you a lot there a lot more to say but i can't describe it and sorry for everything i did and i'm sorry i'm trying my best okie to be the best for you and sorry don't mide i'm very badmosh sahi bola tha i'm but na abhi me sharmata hu na bhohat jada isliye i don't yap that much but i'll from now onwards cause before you were bhavya but now you're mine hehe can i be yours?</p>
+                        
+                        <p>and i'm very chalant hehe it's just i'm scared to let that side out cause what if it's cringe and all that the reason i don't be the real me i'm scared na isliye but dw i'll be my best from now on hehe i love you a lot if there will be anything jo aacha na lage ya kuch ho tho phele hi bata dena ok</p>
+                        
+                        <p>and ykw i just keep on smiling while talking to you even when i'm in public or anthing i just blush so hard arghhh when i see a text from you hehe mwahh i just love you bae so so so much i love you mwahhhh i keep blushing i'm very hppay when i'm spending my time with you the video call we had day before yesterday was so cute it was like my dream come true fr thanks a lot and i love you look so cute even while sleeping awwwwwwwww</p>
+                        
+                        <p>i love you mwahhhhhhhhhhhhhhhhhhhh</p>
+                        
+                        <div style="text-align: center; margin-top: 30px;">
+                            <button class="next-btn" onclick="nextScreen('screen-1', 'screen-2')">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="envolope .png" class="env-pocket-img" id="env-pocket" alt="Pocket">
+            <img src="envolope .png" class="env-flap-img" id="env-flap" alt="Flap" onclick="openEnvelope()">
+        </div>
+
+    </div>
+
+    <!-- SCREEN 2: The Proposal -->
+    <div id="screen-2" class="screen hidden">
+        <div class="container">
+            <img src="hello_kitty.png" alt="Cute Hello Kitty" class="kitty-img">
+            <h1>I love you Bhavya! <br> Will you be my girlfriend? 🥺</h1>
+            <div class="buttons">
+                <button id="yes-btn">Yes! ❤️</button>
+                <button id="no-btn">No</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SCREEN 3: Success -->
+    <div id="success-screen" class="screen hidden">
+        <div class="container" style="background-color: transparent; box-shadow: none;">
+            <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" alt="Happy Bears Kissing" class="happy-img">
+            <h1 style="font-size: 3rem; text-shadow: 2px 2px 4px white;">Yaaaaay! I love you so much! ❤️</h1>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
